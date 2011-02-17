@@ -3,4 +3,4 @@ lib/HTTP/Date.pm
 Makefile.PL
 MANIFEST			This list of files
 README
-t/base/date.t
+t/date.t
