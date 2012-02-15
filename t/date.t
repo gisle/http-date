@@ -7,9 +7,6 @@ plan tests => 133;
 
 use HTTP::Date;
 
-require Time::Local if $^O eq "MacOS";
-my $offset = ($^O eq "MacOS") ? Time::Local::timegm(0,0,0,1,0,70) : 0;
-
 # test str2time for supported dates.  Test cases with 2 digit year
 # will probably break in year 2044.
 my(@tests) =
@@ -57,7 +54,7 @@ my(@tests) =
  '  03   Feb   1994  0:00  ',
 );
 
-my $time = (760233600 + $offset);  # assume broken POSIX counting of seconds
+my $time = 760233600;  # assume broken POSIX counting of seconds
 for (@tests) {
     my $t;
     if (/GMT/i) {
