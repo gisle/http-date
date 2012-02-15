@@ -18,7 +18,7 @@ WriteMakefile(
             'Time::Zone' => 0,
         },
 	resources => {
-            repository => 'http://github.com/gisle/libwww-perl',
+            repository => 'http://github.com/gisle/http-date',
 	    MailingList => 'mailto:libwww@perl.org',
         }
     },
