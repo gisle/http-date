@@ -2,7 +2,6 @@ package HTTP::Date;
 
 $VERSION = "6.00";
 
-require 5.004;
 require Exporter;
 @ISA = qw(Exporter);
 @EXPORT = qw(time2str str2time);
