@@ -3,7 +3,7 @@
 use strict;
 use Test;
 
-plan tests => 133;
+plan tests => 136;
 
 use HTTP::Date;
 
@@ -52,6 +52,9 @@ my(@tests) =
  # A few tests with extra space at various places
  '  03/Feb/1994      ',
  '  03   Feb   1994  0:00  ',
+
+ # Tests a commonly used (faulty?) date format of php cms systems
+ 'Thu, 03 Feb 1994 00:00:00 +0000 GMT'
 );
 
 my $time = 760233600;  # assume broken POSIX counting of seconds
