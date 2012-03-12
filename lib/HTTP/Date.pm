@@ -106,7 +106,7 @@ sub parse_date ($)
 	    \s*
 	 ([-+]?\d{2,4}|(?![APap][Mm]\b)[A-Za-z]+)? # timezone
 	    \s*
-	 (?:\(\w+\))?	       # ASCII representation of timezone in parens.
+	 (?:\(\w+\)|\w{3,})?   # ASCII representation of timezone.
 	    \s*$
 	/x)
 
