@@ -315,13 +315,13 @@ to get the date recognized.
 This function will try to parse a date string, and then return it as a
 list of numerical values followed by a (possible undefined) time zone
 specifier; ($year, $month, $day, $hour, $min, $sec, $tz).  The $year
-returned will B<not> have the number 1900 subtracted from it and the
-$month numbers start with 1.
+will be the full 4-digit year, and $month numbers start with 1 (for January).
 
 In scalar context the numbers are interpolated in a string of the
 "YYYY-MM-DD hh:mm:ss TZ"-format and returned.
 
-If the date is unrecognized, then the empty list is returned.
+If the date is unrecognized, then the empty list is returned (C<undef> in
+scalar context).
 
 The function is able to parse the following formats:
 
