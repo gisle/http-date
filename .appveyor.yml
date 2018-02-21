@@ -13,6 +13,6 @@ install:
   - cmd: "cd %APPVEYOR_BUILD_FOLDER%"
   # Set path for berrybrew
   - SET PATH=C:\berrybrew\%version%\c\bin;C:\berrybrew\%version%\perl\site\bin;C:\berrybrew\%version%\perl\bin;%PATH%
-  - cpanm -n HTTP::Date
+  - cpanm HTTP::Date
 
 build: off
