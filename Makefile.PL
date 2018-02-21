@@ -16,6 +16,7 @@ WriteMakefile(
     META_MERGE => {
         recommends => {
             'Time::Zone' => 0,
+            'Time::Local' => '1.2000',
         },
 	resources => {
             repository => 'http://github.com/gisle/http-date',
