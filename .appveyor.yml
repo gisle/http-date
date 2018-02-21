@@ -1,0 +1,18 @@
+environment:
+    install_berry_perl: "cmd /C git clone https://github.com/stevieb9/berrybrew && cd berrybrew/bin && berrybrew.exe install %version% && berrybrew.exe switch %version%"
+
+    matrix:
+      - install_perl: "%install_berry_perl%"
+        version: "5.24.2_64"
+
+
+install:
+  # Install perl
+  - cmd: "%install_perl%"
+  # Make sure we are in project root
+  - cmd: "cd %APPVEYOR_BUILD_FOLDER%"
+  # Set path for berrybrew
+  - SET PATH=C:\berrybrew\%version%\c\bin;C:\berrybrew\%version%\perl\site\bin;C:\berrybrew\%version%\perl\bin;%PATH%
+  - cpanm -n HTTP::Date
+
+build: off
